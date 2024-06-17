@@ -4,15 +4,34 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public float speed = 20f;
+    public GameObject sprite;
+
+    private Vector2 moveVector;
+    private Rigidbody2D rb;
+    private SpriteRenderer spriteRenderer;
+
+    private void Awake()
     {
-        
+        rb = GetComponent<Rigidbody2D>();
+        spriteRenderer = sprite.GetComponent<SpriteRenderer>();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        
+        moveVector.x = Input.GetAxis("Horizontal");
+        moveVector.y = Input.GetAxis("Vertical");
+        moveVector = moveVector.normalized;
+
+        if (moveVector.x < 0)
+        {
+            spriteRenderer.flipX = true;
+        }
+        else if (moveVector.x > 0)
+        {
+            spriteRenderer.flipX = false;
+        }
+
+        rb.velocity = moveVector * speed;
     }
 }
