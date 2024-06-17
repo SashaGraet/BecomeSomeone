@@ -1,11 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
     public float speed = 20f;
-    public GameObject sprite;
+    public Animator animator;
 
     private Vector2 moveVector;
     private Rigidbody2D rb;
@@ -14,7 +15,7 @@ public class PlayerMovement : MonoBehaviour
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
-        spriteRenderer = sprite.GetComponent<SpriteRenderer>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     private void Update()
@@ -33,5 +34,6 @@ public class PlayerMovement : MonoBehaviour
         }
 
         rb.velocity = moveVector * speed;
+        animator.SetFloat("move", Mathf.Abs(rb.velocity.magnitude));
     }
 }
