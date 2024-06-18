@@ -34,7 +34,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -43,12 +43,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 48
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -72,7 +72,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -108,7 +108,805 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: isonswhite2_0
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 136
+        width: 16
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ac3f6e9a16ce01488c8b57fb9a12639
+      internalID: -960917146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isonswhite2_1
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 136
+        width: 21
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca3727f527f254d488529f41a2bcf137
+      internalID: -1302949172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isonswhite2_2
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 136
+        width: 18
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38a424b9e8d04894cb6535626175fae0
+      internalID: 822722819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isonswhite2_3
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 138
+        width: 19
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11ec948758c3b214ebdaeb372aabdd7b
+      internalID: -1708270292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isonswhite2_4
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 138
+        width: 19
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05e22d52f6237ee4f9d9065102db4ca8
+      internalID: -2051722916
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isonswhite2_5
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 136
+        width: 19
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8be8918fb5af6741830be3c679764d1
+      internalID: 1511212024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isonswhite2_7
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 134
+        width: 18
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ec6d5f2b23c8d64ebc4af7acd0a1bbc
+      internalID: 1057501359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isonswhite2_8
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 6
+        width: 20
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dbc6960ef5248b84d9af659ad93b70b4
+      internalID: 1872241130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isonswhite2_10
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 101
+        width: 19
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3fddf039c4f5784192fb4f71a2ac4e4
+      internalID: -682246985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isonswhite2_11
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 102
+        width: 17
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b94f17b54d54d7248b5d52aef61a635c
+      internalID: 1433723684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isonswhite2_12
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 104
+        width: 14
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f2c2282402264e439c1dc2760f7a207
+      internalID: -854025651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isonswhite2_13
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 104
+        width: 14
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c52ee4d6aebc464ab7df8c29893ee8b
+      internalID: -1948139303
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isonswhite2_14
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 104
+        width: 18
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2a501526cee40b40947ae6ce4f20636
+      internalID: -1581612935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isonswhite2_15
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 110
+        width: 20
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a818a3ff34831fa459aa7c63881f6bba
+      internalID: -508793616
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isonswhite2_16
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 102
+        width: 21
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dbd203d0e948b244490ce20d2353d80b
+      internalID: 1583820081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isonswhite2_17
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 70
+        width: 16
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1bcefcd6637b0f645be907d32173df4b
+      internalID: 437660064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isonswhite2_18
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 68
+        width: 18
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea0e050cb12e7ed4fba3aa4294783f27
+      internalID: -1631719401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isonswhite2_19
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 70
+        width: 18
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60cfd88a742eed943b8f6b8af9a4bd7c
+      internalID: -308820463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isonswhite2_20
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 70
+        width: 23
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59d7a0cd1bb5dfe43aacb96f3c80d758
+      internalID: 236997860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isonswhite2_22
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 68
+        width: 20
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2c259d2fe18bfe4d9ab09d42a14eb52
+      internalID: 1009915322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isonswhite2_24
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 72
+        width: 18
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ccade4338e07d8f4d9bc2686982e6135
+      internalID: -1881178516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isonswhite2_25
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 71
+        width: 18
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0647ef4336eb1a4683cc404ee516edd
+      internalID: 1721908431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isonswhite2_30
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 40
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db3a5955c172c944f9059461fba768b6
+      internalID: -102816391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isonswhite2_31
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 40
+        width: 16
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f99940e58d9708443b2d35242d314aea
+      internalID: -1381506786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isonswhite2_32
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 41
+        width: 11
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d97d506617618649a30780b2c19d966
+      internalID: 1374218597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isonswhite2_34
+      rect:
+        serializedVersion: 2
+        x: 169
+        y: 40
+        width: 16
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 947c18dd5646c134abf5fad87cc9b7c5
+      internalID: 1029896805
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isonswhite2_35
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 7
+        width: 16
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6bbf21d7bb0221d43a23105de561af6b
+      internalID: -1060422364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isonswhite2_38
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 6
+        width: 18
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df79e41641558fd43940dbe21d6fcbf1
+      internalID: -1864153501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isonswhite2_39
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 6
+        width: 18
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46100f03b41a7c14f93d95ea187d0574
+      internalID: -1984492323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isonswhite2_48
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 7
+        width: 12
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bff901109857cd54fba6165e98a41e33
+      internalID: -1684686972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isonswhite2_49
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 40
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8496ddc3102be141bb3deb2d1969b2f
+      internalID: 851980119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isonswhite2_50
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 40
+        width: 16
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 879811e9b0e82184cb40e9cb03911871
+      internalID: 479898111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isonswhite2_51
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 40
+        width: 6
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9cc007c85d16523428bb59338763f9d5
+      internalID: -1766076798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isonswhite2_54
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 40
+        width: 17
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2637da96c8db8484d8f744f043728a23
+      internalID: 1348516707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isonswhite2_55
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 70
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 315b5e2ce472f944b9a32e0b68fbc119
+      internalID: -1778381984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isonswhite2_56
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 109
+        width: 22
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b22ca91be4ba8d549a8780c1e42f2fed
+      internalID: -1961800134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isonswhite2_9
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 6
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e6ce3af2ebeb0b41abf322cffdea090
+      internalID: -1710373556
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isonswhite2_21
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 6
+        width: 19
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32f8756d850aead42aa88582cc18e73d
+      internalID: -670417027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -119,7 +917,65 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      isonswhite2_0: -960917146
+      isonswhite2_1: -1302949172
+      isonswhite2_10: -682246985
+      isonswhite2_11: 1433723684
+      isonswhite2_12: -854025651
+      isonswhite2_13: -1948139303
+      isonswhite2_14: -1581612935
+      isonswhite2_15: -508793616
+      isonswhite2_16: 1583820081
+      isonswhite2_17: 437660064
+      isonswhite2_18: -1631719401
+      isonswhite2_19: -308820463
+      isonswhite2_2: 822722819
+      isonswhite2_20: 236997860
+      isonswhite2_21: -670417027
+      isonswhite2_22: 1009915322
+      isonswhite2_23: 1548141016
+      isonswhite2_24: -1881178516
+      isonswhite2_25: 1721908431
+      isonswhite2_26: 1947045676
+      isonswhite2_27: 1713802199
+      isonswhite2_28: -1210394868
+      isonswhite2_29: 1527056470
+      isonswhite2_3: -1708270292
+      isonswhite2_30: -102816391
+      isonswhite2_31: -1381506786
+      isonswhite2_32: 1374218597
+      isonswhite2_33: 797981604
+      isonswhite2_34: 1029896805
+      isonswhite2_35: -1060422364
+      isonswhite2_36: -339382026
+      isonswhite2_37: 139863714
+      isonswhite2_38: -1864153501
+      isonswhite2_39: -1984492323
+      isonswhite2_4: -2051722916
+      isonswhite2_40: 626495864
+      isonswhite2_41: 687840875
+      isonswhite2_42: -1946097534
+      isonswhite2_43: 1560034250
+      isonswhite2_44: -421389995
+      isonswhite2_45: -1622696557
+      isonswhite2_46: 40311724
+      isonswhite2_47: -1329037041
+      isonswhite2_48: -1684686972
+      isonswhite2_49: 851980119
+      isonswhite2_5: 1511212024
+      isonswhite2_50: 479898111
+      isonswhite2_51: -1766076798
+      isonswhite2_52: 2080210849
+      isonswhite2_53: -1986393985
+      isonswhite2_54: 1348516707
+      isonswhite2_55: -1778381984
+      isonswhite2_56: -1961800134
+      isonswhite2_57: 408683906
+      isonswhite2_6: -442091256
+      isonswhite2_7: 1057501359
+      isonswhite2_8: 1872241130
+      isonswhite2_9: -1710373556
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
