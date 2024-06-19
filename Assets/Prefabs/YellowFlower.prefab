@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 7969963771407193289}
   m_Layer: 0
   m_Name: YellowFlower
-  m_TagString: Untagged
+  m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -171,4 +171,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c88702e283f824439429ba686951438, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slotItem: {fileID: 581504708875646276, guid: 1e3ad05c780ab494e8000d3f609578f8, type: 3}
+  <ItemData>k__BackingField: {fileID: 11400000, guid: 5fbf9695d6362e34da69068863e6f5fb, type: 2}
+  <SpriteRenderer>k__BackingField: {fileID: 6772825484024722860}

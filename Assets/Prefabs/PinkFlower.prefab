@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 8899275300020506267}
   m_Layer: 0
   m_Name: PinkFlower
-  m_TagString: Untagged
+  m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -171,4 +171,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c88702e283f824439429ba686951438, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slotItem: {fileID: 1510568689804178911, guid: 6e927b2904369e948badbf1c2b950ed2, type: 3}
+  <ItemData>k__BackingField: {fileID: 11400000, guid: 68dcf9a1b9e53844eac8663ee2762b10, type: 2}
+  <SpriteRenderer>k__BackingField: {fileID: 4976431740260705774}
