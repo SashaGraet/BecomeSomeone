@@ -9,9 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4f2f7da5795f48bb8d0fbeebdd4700df, type: 3}
-  m_Name: PinkFlower
+  m_Script: {fileID: 11500000, guid: bc8e747ddb5049a58bf34c0485a1077d, type: 3}
+  m_Name: ScenesConfig
   m_EditorClassIdentifier: 
-  itemName: "\u0420\u043E\u0437\u043E\u0432\u044B\u0439 \u0446\u0432\u0435\u0442\u043E\u043A"
-  itemPrefab: {fileID: 6468232824737383005, guid: a465cf5f930aa3149b58b902d7325cec, type: 3}
-  type: 0
+  mainMenuSceneIndex: 0
+  playerHouseSceneIndex: 1
+  gameSceneIndex: 2
+  shopSceneIndex: 3

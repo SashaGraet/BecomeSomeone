@@ -7,6 +7,7 @@ using InventorySystem.Slots.Slot;
 using MiniGames;
 using MiniGames.AxeClicker;
 using RolesSystem;
+using SaveLoadSystem;
 using SpawnSystem;
 using UI;
 using UI.PauseMenu;
@@ -24,6 +25,7 @@ namespace ServiceLocatorSystem
         [SerializeField] private InputManager inputManager;
         [SerializeField] private PauseMenuView pauseMenuView;
         [SerializeField] private Timer timer;
+        [SerializeField] private SaveFilesConfig saveFilesConfig;
         
         private void Awake()
         {
@@ -43,7 +45,7 @@ namespace ServiceLocatorSystem
             ServiceLocator.Instance.Add(pauseMenuView);
             ServiceLocator.Instance.Add(timer);
             
-            ServiceLocator.Instance.Add(new RolesManager());
+            ServiceLocator.Instance.Add(new RolesManager(saveFilesConfig));
         }
 
         private void InitializeServices()
@@ -56,8 +58,7 @@ namespace ServiceLocatorSystem
             ServiceLocator.Instance.Get<MiniGamesManager>().Initialize();
             ServiceLocator.Instance.Get<RolesManager>().Initialize();
             ServiceLocator.Instance.Get<PauseMenuView>().Initialize();
-            
-            ServiceLocator.Instance.Get<Timer>().StartTimer(0, 4, () => Debug.Log("Время вышло"));
+            ServiceLocator.Instance.Get<Timer>().Initialize();
             ServiceLocator.Instance.Get<MiniGamesManager>().StartGame<AxeClicker>();
         }
     }

@@ -1,19 +1,31 @@
 using System;
+using SceneManagement;
 using ServiceLocatorSystem;
 using TMPro;
+using UI.PauseMenu;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 namespace UI
 {
     public class Timer : MonoBehaviour, IService
     {
+        [SerializeField] private ScenesConfig scenesConfig;
+        [SerializeField] private RectTransform rectTransform;
         [SerializeField] private TMP_Text minutesField;
         [SerializeField] private TMP_Text secondsField;
-
+        [SerializeField, Range(1, 10)] private int startMinutes;
+        [SerializeField, Range(0, 59)] private int startSeconds;
+        
         private bool _isStart;
         private float _currentTime;
-        private Action _onEndTime;
 
+        public void Initialize()
+        {
+            StartTimer();
+        }
+        
         private void Update()
         {
             if (_isStart)
@@ -24,7 +36,7 @@ namespace UI
                 {
                     _currentTime = 0;
                     _isStart = false;
-                    _onEndTime.Invoke();
+                    SceneManager.LoadScene(scenesConfig.playerHouseSceneIndex);
                 }
                 
                 UpdateFields();
@@ -32,31 +44,15 @@ namespace UI
             }
         }
 
-        public void StartTimer(int minutes, int seconds, Action onEndTime)
+        private void StartTimer()
         {
-            if (minutes < 0 || seconds < 0)
-            {
-                Debug.LogError("Time values less than 0");
-                return;
-            }
-
-            if (seconds > 60)
-            {
-                Debug.LogError("Seconds more than 60");
-                return;
-            }
-
-            _currentTime = minutes * 60 + seconds;
-            _onEndTime = onEndTime;
+            _currentTime = startMinutes * 60 + startSeconds;
             _isStart = true;
         }
 
         private (int, int) TransformTime()
         {
-            int minutes = (int)(_currentTime / 60);
-            int seconds = (int)(_currentTime % 60);
-
-            return (minutes, seconds);
+            return ((int)(_currentTime / 60), (int)(_currentTime % 60));
         }
 
         private void UpdateFields()
@@ -73,6 +69,8 @@ namespace UI
             {
                 secondsField.text = seconds.ToString();
             }
+            
+            LayoutRebuilder.ForceRebuildLayoutImmediate(rectTransform);
         }
     }
 }

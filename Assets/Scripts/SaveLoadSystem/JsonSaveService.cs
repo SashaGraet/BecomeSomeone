@@ -10,7 +10,6 @@ namespace SaveLoadSystem
         {
             using StreamWriter sw = new StreamWriter(new FileStream(BuildPath(fileName), FileMode.OpenOrCreate));
             string json = JsonConvert.SerializeObject(data);
-            Debug.Log(json);
             sw.Write(json);
         }
 
@@ -18,7 +17,6 @@ namespace SaveLoadSystem
         {
             using StreamReader sr = new StreamReader(new FileStream(BuildPath(fileName), FileMode.OpenOrCreate));
             string json = sr.ReadToEnd();
-            Debug.Log(json);
             return JsonConvert.DeserializeObject<T>(json);
         }
 

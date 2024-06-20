@@ -20,9 +20,11 @@ namespace MiniGames.AxeClicker
         [SerializeField] private AxeCutterRole role;
         [SerializeField] private RectTransform rectTransform;
         [SerializeField] private Texture2D cursor;
+        [SerializeField, Range(0.1f, 2f)] private float clickTime;
 
         protected override Role Role => role;
-
+        
+        private float _currentClickTime;
         private Spawner _spawner;
         private int _currentIteration;
         private Hole _hole;
@@ -49,7 +51,19 @@ namespace MiniGames.AxeClicker
 
         private void Awake()
         {
-            gameObject.SetActive(false);
+            Hide();
+        }
+
+        private void Update()
+        {
+            if (IsActive)
+            {
+                _currentClickTime += Time.deltaTime;
+                if (_currentClickTime >= clickTime)
+                {
+                    Hide();
+                }
+            }
         }
 
         public override void StartGame()
@@ -61,29 +75,29 @@ namespace MiniGames.AxeClicker
                 if (cursor != null)
                 {
                     Cursor.SetCursor(cursor, Vector2.zero, CursorMode.Auto);   
-                }   
+                }
+
+                IsActive = true;
+                _currentClickTime = 0;
+                _currentIteration = 0;
             }
         }
 
         protected override void OnWin<T>(T newRole)
         {
             base.OnWin(newRole);
-            gameObject.SetActive(false);
-        }
-
-        private void OnLose()
-        {
-            gameObject.SetActive(false);
+            Hide();
         }
 
         public void OnWoodClick()
         {
-            OnLose();
+            Hide();
         }
 
         private void OnHoleClick()
         {
             _currentIteration += 1;
+            _currentClickTime = 0;
             if (!CheckIsEndIteration())
             {
                 SpawnHole();
@@ -120,6 +134,12 @@ namespace MiniGames.AxeClicker
             _hole.Initialize(OnHoleClick);
             
             _hole.RectTransform.sizeDelta = new Vector2(size, size);
+        }
+
+        private void Hide()
+        {
+            gameObject.SetActive(false);
+            IsActive = false;
         }
     }
 }

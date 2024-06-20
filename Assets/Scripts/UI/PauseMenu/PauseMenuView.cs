@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using RolesSystem;
+using SceneManagement;
 using ServiceLocatorSystem;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -8,8 +9,7 @@ namespace UI.PauseMenu
 {
     public class PauseMenuView : MonoBehaviour, IService
     {
-        [SerializeField] private int mainMenuSceneIndex;
-        [SerializeField] private int playerHouseSceneIndex;
+        [SerializeField] private ScenesConfig scenesConfig;
         [SerializeField] private RolesWindow rolesWindow;
         [SerializeField] private GameObject buttonsPlace;
         
@@ -37,12 +37,12 @@ namespace UI.PauseMenu
 
         public void ToMainMenu()
         {
-            SceneManager.LoadScene(mainMenuSceneIndex);
+            SceneManager.LoadScene(scenesConfig.mainMenuSceneIndex);
         }
 
         public void RestartDay()
         {
-            SceneManager.LoadScene(playerHouseSceneIndex);
+            SceneManager.LoadScene(scenesConfig.playerHouseSceneIndex);
         }
 
         public void ShowRolesWindow()

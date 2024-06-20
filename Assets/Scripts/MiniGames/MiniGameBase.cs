@@ -8,6 +8,8 @@ namespace MiniGames
     public abstract class MiniGameBase : MonoBehaviour
     {
         protected abstract Role Role { get; }
+        protected bool IsActive;
+        
         private RolesManager _rolesManager;
 
         public abstract void StartGame();
@@ -33,7 +35,7 @@ namespace MiniGames
             {
                 return true;
             }
-
+            
             return false;
         }
     }

@@ -14,13 +14,17 @@ namespace RolesSystem
         public List<Role> Roles { get; } = new();
         
         private List<string> _activeRolesNames = new();
-        
-        private static readonly string FilePath = "roles.json";
+        private readonly string _filePath;
 
+        public RolesManager(SaveFilesConfig saveFilesConfig)
+        {
+            _filePath = saveFilesConfig.saveRolesFile;
+        }
+        
         public void Initialize()
         {
             Load();
-            foreach (var role in Roles)
+            foreach (var role in GetActiveRoles())
             {
                 role.ApplyBonus();
             }
@@ -58,7 +62,7 @@ namespace RolesSystem
         private void Load()
         {
             JsonSaveService saveService = new JsonSaveService();
-            _activeRolesNames = saveService.Load<List<string>>(FilePath);
+            _activeRolesNames = saveService.Load<List<string>>(_filePath);
             if (_activeRolesNames == null)
             {
                 _activeRolesNames = new List<string>();
@@ -69,7 +73,7 @@ namespace RolesSystem
         private void Save()
         {
             JsonSaveService saveService = new JsonSaveService();
-            saveService.Save(_activeRolesNames, FilePath);
+            saveService.Save(_activeRolesNames, _filePath);
         }
     }
 }
