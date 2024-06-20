@@ -1,5 +1,5 @@
+using Actors.Player;
 using InventorySystem.Item;
-using Player;
 using ServiceLocatorSystem;
 using SpawnSystem;
 

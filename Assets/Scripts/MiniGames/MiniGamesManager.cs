@@ -1,5 +1,4 @@
 using System.Collections.Generic;
-using MiniGames.MiniGameBase;
 using ServiceLocatorSystem;
 using UnityEngine;
 
@@ -7,7 +6,7 @@ namespace MiniGames
 {
     public class MiniGamesManager : MonoBehaviour, IService
     {
-        [SerializeField] private List<MiniGameViewBase> miniGames;
+        [SerializeField] private List<MiniGameBase> miniGames;
         
         public void Initialize()
         {
@@ -17,13 +16,13 @@ namespace MiniGames
             }
         }
         
-        public void StartGame<T>() where T : MiniGameViewBase
+        public void StartGame<T>() where T : MiniGameBase
         {
             foreach (var miniGame in miniGames)
             {
                 if (typeof(T) == miniGame.GetType())
                 {
-                    miniGame.Presenter.StartGame();
+                    miniGame.StartGame();
                 }
             }
         }

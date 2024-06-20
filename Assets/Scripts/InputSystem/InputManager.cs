@@ -1,6 +1,7 @@
 using System;
 using ServiceLocatorSystem;
 using UI;
+using UI.PauseMenu;
 using UnityEngine;
 
 namespace InputSystem
@@ -9,18 +10,18 @@ namespace InputSystem
     {
         [SerializeField] private InputConfig inputConfig;
 
-        private PauseMenu _pauseMenu;
+        private PauseMenuView _pauseMenuView;
 
         public void Initialize()
         {
-            _pauseMenu = ServiceLocator.Instance.Get<PauseMenu>();
+            _pauseMenuView = ServiceLocator.Instance.Get<PauseMenuView>();
         }
 
         private void Update()
         {
             if (Input.GetKeyDown(inputConfig.pauseKey))
             {
-                _pauseMenu.gameObject.SetActive(!_pauseMenu.gameObject.activeSelf);
+                _pauseMenuView.SetActiveHandle();
             }
         }
     }

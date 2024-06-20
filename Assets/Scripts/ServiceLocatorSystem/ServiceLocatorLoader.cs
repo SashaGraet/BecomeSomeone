@@ -1,14 +1,17 @@
 using System;
 using System.Collections.Generic;
+using Actors.Player;
 using InputSystem;
 using InventorySystem;
 using InventorySystem.Slots.Slot;
 using MiniGames;
 using MiniGames.AxeClicker;
-using Player;
+using RolesSystem;
 using SpawnSystem;
 using UI;
+using UI.PauseMenu;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace ServiceLocatorSystem
 {
@@ -19,7 +22,8 @@ namespace ServiceLocatorSystem
         [SerializeField] private PlayerCharacter player;
         [SerializeField] private MiniGamesManager miniGamesManager;
         [SerializeField] private InputManager inputManager;
-        [SerializeField] private PauseMenu pauseMenu;
+        [SerializeField] private PauseMenuView pauseMenuView;
+        [SerializeField] private Timer timer;
         
         private void Awake()
         {
@@ -36,16 +40,25 @@ namespace ServiceLocatorSystem
             ServiceLocator.Instance.Add(player);
             ServiceLocator.Instance.Add(miniGamesManager);
             ServiceLocator.Instance.Add(inputManager);
-            ServiceLocator.Instance.Add(pauseMenu);
+            ServiceLocator.Instance.Add(pauseMenuView);
+            ServiceLocator.Instance.Add(timer);
+            
+            ServiceLocator.Instance.Add(new RolesManager());
         }
 
         private void InitializeServices()
         {
+            // Игрок инициализируется раньеш всех
+            ServiceLocator.Instance.Get<PlayerCharacter>().Initialize();
             ServiceLocator.Instance.Get<Inventory>().Initialize();
-            ServiceLocator.Instance.Get<MiniGamesManager>().Initialize();
             ServiceLocator.Instance.Get<InputManager>().Initialize();
+            // Миниигры инициализируются до ролей
+            ServiceLocator.Instance.Get<MiniGamesManager>().Initialize();
+            ServiceLocator.Instance.Get<RolesManager>().Initialize();
+            ServiceLocator.Instance.Get<PauseMenuView>().Initialize();
             
-            ServiceLocator.Instance.Get<MiniGamesManager>().StartGame<AxeClickerView>();
+            ServiceLocator.Instance.Get<Timer>().StartTimer(0, 4, () => Debug.Log("Время вышло"));
+            ServiceLocator.Instance.Get<MiniGamesManager>().StartGame<AxeClicker>();
         }
     }
 }
