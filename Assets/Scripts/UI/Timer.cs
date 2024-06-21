@@ -10,7 +10,7 @@ namespace UI
 {
     public class Timer : MonoBehaviour, IService
     {
-        [SerializeField] private SceneAsset playerHouseScene;
+        [SerializeField] private int playerHouseSceneIndex;
         [SerializeField] private RectTransform rectTransform;
         [SerializeField] private TMP_Text minutesField;
         [SerializeField] private TMP_Text secondsField;
@@ -36,7 +36,7 @@ namespace UI
                     _currentTime = 0;
                     _isStart = false;
                     GameInfo.Reset();
-                    SceneManager.LoadScene(playerHouseScene.name);
+                    SceneManager.LoadScene(playerHouseSceneIndex);
                 }
 
                 GameInfo.Time = _currentTime;

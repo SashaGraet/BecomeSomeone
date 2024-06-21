@@ -11,8 +11,8 @@ namespace UI.PauseMenu
 {
     public class PauseMenuView : MonoBehaviour, IService
     {
-        [SerializeField] private SceneAsset mainMenuScene;
-        [SerializeField] private SceneAsset playerHouseScene;
+        [SerializeField] private int mainMenuSceneIndex;
+        [SerializeField] private int playerHouseSceneIndex;
         [SerializeField] private RolesWindow rolesWindow;
         [SerializeField] private GameObject buttonsPlace;
         
@@ -42,14 +42,14 @@ namespace UI.PauseMenu
         {
             Time.timeScale = 1;
             GameInfo.Reset();
-            SceneManager.LoadScene(mainMenuScene.name);
+            SceneManager.LoadScene(mainMenuSceneIndex);
         }
 
         public void RestartDay()
         {
             Time.timeScale = 1;
             GameInfo.Reset();
-            SceneManager.LoadScene(playerHouseScene.name);
+            SceneManager.LoadScene(playerHouseSceneIndex);
         }
 
         public void ShowRolesWindow()

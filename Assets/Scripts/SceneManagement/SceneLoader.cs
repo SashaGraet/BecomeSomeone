@@ -12,7 +12,7 @@ namespace SceneManagement
     [RequireComponent(typeof(Collider2D))]
     public class SceneLoader : MonoBehaviour
     {
-        [SerializeField] private SceneAsset loadScene;
+        [SerializeField] private int loadSceneIndex;
 
         private Inventory _inventory;
 
@@ -26,7 +26,7 @@ namespace SceneManagement
             if (other.CompareTag("Player"))
             {
                 GameInfo.InventoryItems = _inventory.Items;
-                SceneManager.LoadScene(loadScene.name);
+                SceneManager.LoadScene(loadSceneIndex);
             }
         }
     }

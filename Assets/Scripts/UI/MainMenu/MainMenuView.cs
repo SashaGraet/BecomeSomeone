@@ -10,7 +10,7 @@ namespace UI.MainMenu
     public class MainMenuView : MonoBehaviour
     {
         [SerializeField] private SaveFilesConfig saveFilesConfig;
-        [SerializeField] private SceneAsset playerHouseScene;
+        [SerializeField] private int playerHouseSceneIndex;
         [SerializeField] private SettingsWindow settingsWindow;
         
         public void OnNewGame()
@@ -18,12 +18,12 @@ namespace UI.MainMenu
             JsonSaveService saveService = new JsonSaveService();
             
             saveService.Save(new List<string>(), saveFilesConfig.saveRolesFile);
-            SceneManager.LoadScene(playerHouseScene.name);
+            SceneManager.LoadScene(playerHouseSceneIndex);
         }
 
         public void OnContinueGame()
         {
-            SceneManager.LoadScene(playerHouseScene.name);
+            SceneManager.LoadScene(playerHouseSceneIndex);
         }
 
         public void OnSettings()
