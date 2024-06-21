@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using SaveLoadSystem;
 using SceneManagement;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -9,7 +10,7 @@ namespace UI.MainMenu
     public class MainMenuView : MonoBehaviour
     {
         [SerializeField] private SaveFilesConfig saveFilesConfig;
-        [SerializeField] private ScenesConfig scenesConfig;
+        [SerializeField] private SceneAsset playerHouseScene;
         [SerializeField] private SettingsWindow settingsWindow;
         
         public void OnNewGame()
@@ -17,11 +18,12 @@ namespace UI.MainMenu
             JsonSaveService saveService = new JsonSaveService();
             
             saveService.Save(new List<string>(), saveFilesConfig.saveRolesFile);
+            SceneManager.LoadScene(playerHouseScene.name);
         }
 
         public void OnContinueGame()
         {
-            SceneManager.LoadScene(scenesConfig.playerHouseSceneIndex);
+            SceneManager.LoadScene(playerHouseScene.name);
         }
 
         public void OnSettings()

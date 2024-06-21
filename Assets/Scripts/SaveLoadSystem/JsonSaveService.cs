@@ -8,7 +8,7 @@ namespace SaveLoadSystem
     {
         public void Save(object data, string fileName)
         {
-            using StreamWriter sw = new StreamWriter(new FileStream(BuildPath(fileName), FileMode.OpenOrCreate));
+            using StreamWriter sw = new StreamWriter(new FileStream(BuildPath(fileName), FileMode.Create));
             string json = JsonConvert.SerializeObject(data);
             sw.Write(json);
         }

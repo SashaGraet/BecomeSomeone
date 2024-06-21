@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: InputConfig
   m_EditorClassIdentifier: 
   pauseKey: 27
+  interactKey: 102

@@ -1,9 +1,11 @@
 using System.Collections;
+using Actors.Player;
 using ServiceLocatorSystem;
 using UnityEngine;
 
 namespace InventorySystem.Item
 {
+    [RequireComponent(typeof(Collider2D))]
     public class PickUpItem : MonoBehaviour
     {
         [field: SerializeField] public ItemData ItemData { get; private set; }
@@ -16,7 +18,7 @@ namespace InventorySystem.Item
             get => _isBlock;
             set
             {
-                _inventory = ServiceLocator.Instance.Get<Inventory>();
+                _inventory = ServiceLocator.Instance.Get<PlayerCharacter>().Inventory;
 
                 if (value)
                 {

@@ -6,5 +6,6 @@ namespace InputSystem
     public class InputConfig : ScriptableObject
     {
         public KeyCode pauseKey;
+        public KeyCode interactKey;
     }
 }

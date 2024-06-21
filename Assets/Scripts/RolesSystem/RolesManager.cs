@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using Game;
 using RolesSystem.Roles;
 using SaveLoadSystem;
 using ServiceLocatorSystem;
@@ -24,9 +25,12 @@ namespace RolesSystem
         public void Initialize()
         {
             Load();
-            foreach (var role in GetActiveRoles())
+            if (!GameInfo.IsInitialized)
             {
-                role.ApplyBonus();
+                foreach (var role in GetActiveRoles())
+                {
+                    role.ApplyBonus();
+                }   
             }
         }
 

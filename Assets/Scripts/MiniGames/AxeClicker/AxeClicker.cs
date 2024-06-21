@@ -20,7 +20,7 @@ namespace MiniGames.AxeClicker
         [SerializeField] private AxeCutterRole role;
         [SerializeField] private RectTransform rectTransform;
         [SerializeField] private Texture2D cursor;
-        [SerializeField, Range(0.1f, 2f)] private float clickTime;
+        [SerializeField, Range(0.1f, 5f)] private float clickTime;
 
         protected override Role Role => role;
         
@@ -29,8 +29,10 @@ namespace MiniGames.AxeClicker
         private int _currentIteration;
         private Hole _hole;
 
-        private void OnValidate()
+        protected override void OnValidate()
         {
+            base.OnValidate();
+            
             if (sizeDelta >= size)
             {
                 sizeDelta = size - 1;
@@ -51,7 +53,8 @@ namespace MiniGames.AxeClicker
 
         private void Awake()
         {
-            Hide();
+            // Раскоммитить после реализации запуска игры после диалога
+            // Hide(); 
         }
 
         private void Update()
@@ -68,7 +71,7 @@ namespace MiniGames.AxeClicker
 
         public override void StartGame()
         {
-            if (!IsRoleAlreadyActivated())
+            if (IsAvailableToStart())
             {
                 gameObject.SetActive(true);
                 SpawnHole();

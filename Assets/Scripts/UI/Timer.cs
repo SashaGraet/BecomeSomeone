@@ -1,8 +1,7 @@
-using System;
-using SceneManagement;
+using Game;
 using ServiceLocatorSystem;
 using TMPro;
-using UI.PauseMenu;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -11,7 +10,7 @@ namespace UI
 {
     public class Timer : MonoBehaviour, IService
     {
-        [SerializeField] private ScenesConfig scenesConfig;
+        [SerializeField] private SceneAsset playerHouseScene;
         [SerializeField] private RectTransform rectTransform;
         [SerializeField] private TMP_Text minutesField;
         [SerializeField] private TMP_Text secondsField;
@@ -36,17 +35,26 @@ namespace UI
                 {
                     _currentTime = 0;
                     _isStart = false;
-                    SceneManager.LoadScene(scenesConfig.playerHouseSceneIndex);
+                    GameInfo.Reset();
+                    SceneManager.LoadScene(playerHouseScene.name);
                 }
-                
+
+                GameInfo.Time = _currentTime;
                 UpdateFields();
-                
             }
         }
 
         private void StartTimer()
         {
-            _currentTime = startMinutes * 60 + startSeconds;
+            if (!GameInfo.IsInitialized)
+            {
+                _currentTime = startMinutes * 60 + startSeconds;
+            }
+            else
+            {
+                _currentTime = GameInfo.Time;
+            }
+            
             _isStart = true;
         }
 

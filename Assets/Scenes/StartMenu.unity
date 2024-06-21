@@ -3026,7 +3026,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   saveFilesConfig: {fileID: 11400000, guid: 53ab6652edde44946a280bc89083716d, type: 2}
-  scenesConfig: {fileID: 11400000, guid: 851d0075b6b1658468332cc34917b608, type: 2}
+  playerHouseScene: {fileID: 102900000, guid: 2cda990e2423bbf4892e6590ba056729, type: 3}
   settingsWindow: {fileID: 243288431}
 --- !u!1 &1732449682
 GameObject:

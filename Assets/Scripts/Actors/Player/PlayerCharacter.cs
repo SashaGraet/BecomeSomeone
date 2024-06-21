@@ -1,4 +1,7 @@
 using Actors.Player.Stats;
+using Game;
+using InteractSystem;
+using InventorySystem;
 using ServiceLocatorSystem;
 using UnityEngine;
 
@@ -6,11 +9,12 @@ namespace Actors.Player
 {
     public class PlayerCharacter : MonoBehaviour, IService, IDamageable
     {
-        [field: SerializeField, Range(1, 3)] public int Health { get; private set; }
-        [field: SerializeField, Range(1, 3)] public int Coins { get; private set; }
-        
+        [field: SerializeField] public Inventory Inventory { get; private set; }
+
+        [SerializeField] private PlayerInfo playerInfo;
         [SerializeField] private PlayerStatView healthView;
         [SerializeField] private PlayerStatView coinsView;
+        [SerializeField] private InteractManager interactManager;
         
         public float speed = 20f;
         public Animator animator;
@@ -21,8 +25,15 @@ namespace Actors.Player
 
         public void Initialize()
         {
+            if (!GameInfo.IsInitialized)
+            {
+                GameInfo.PlayerInfo = playerInfo;
+            }
+            
             healthView.Initialize();
             coinsView.Initialize();
+            interactManager.Initialize();
+            Inventory.Initialize();
         }
         
         private void Awake()
@@ -53,11 +64,11 @@ namespace Actors.Player
         {
             if (damage > 0)
             {
-                Health -= damage;
+                GameInfo.PlayerInfo.health -= damage;
 
-                if (Health <= 0)
+                if (GameInfo.PlayerInfo.health <= 0)
                 {
-                    Health = 0;
+                    GameInfo.PlayerInfo.health = 0;
                     Die();
                 }
                 
@@ -70,11 +81,20 @@ namespace Actors.Player
             Debug.Log("Умер");
         }
 
-        public void AddCoins(int count)
+        public void ChangeCoins(int delta)
         {
-            if (count > 0)
+            if (delta > 0)
             {
-                Coins += count;
+                GameInfo.PlayerInfo.coins += delta;
+                coinsView.UpdateStat();
+            } 
+            else if (delta < 0)
+            {
+                GameInfo.PlayerInfo.coins += delta;
+                if (GameInfo.PlayerInfo.coins < 0)
+                {
+                    GameInfo.PlayerInfo.coins = 0;
+                }
                 coinsView.UpdateStat();
             }
         }

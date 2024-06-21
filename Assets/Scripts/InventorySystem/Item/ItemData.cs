@@ -13,16 +13,19 @@ namespace InventorySystem.Item
 
         private void OnValidate()
         {
-            PickUpItem pickUpItem = itemPrefab.GetComponent<PickUpItem>();
+            if (itemPrefab != null)
+            {
+                PickUpItem pickUpItem = itemPrefab.GetComponent<PickUpItem>();
             
-            if (pickUpItem == null)
-            {
-                Debug.LogError("Prefab doesn't contain PickUpItem component");
-                itemPrefab = null;
-            }
-            else
-            {
-                PickUpItem = pickUpItem;
+                if (pickUpItem == null)
+                {
+                    Debug.LogError("Prefab doesn't contain PickUpItem component");
+                    itemPrefab = null;
+                }
+                else
+                {
+                    PickUpItem = pickUpItem;
+                }   
             }
         }
     }

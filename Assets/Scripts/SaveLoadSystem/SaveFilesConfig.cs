@@ -7,5 +7,6 @@ namespace SaveLoadSystem
     {
         public string saveRolesFile;
         public string saveSettingsFile;
+        public string saveDayFile;
     }
 }

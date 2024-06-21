@@ -1,18 +1,38 @@
 using System;
 using System.Collections.Generic;
+using Game;
 using InventorySystem.Item;
 using InventorySystem.Slots.Slot;
 using ServiceLocatorSystem;
 using UnityEngine;
 namespace InventorySystem
 {
-    public class Inventory : MonoBehaviour, IService
+    public class Inventory : MonoBehaviour
     {
         [SerializeField] private List<SlotView> slots;
         [SerializeField] private CircleCollider2D circleCollider;
         [SerializeField, Range(0.1f, 1)] private float pickUpRadius;
         
         [field: SerializeField] public InventoryConfig Config { get; private set; }
+
+        public List<ItemData> Items
+        {
+            get
+            {
+                List<ItemData> itemsData = new();
+                
+                foreach (var slot in slots)
+                {
+                    ItemData itemData = slot.Presenter.Model.ItemData;
+                    if (itemData != null)
+                    {
+                        itemsData.Add(itemData);   
+                    }
+                }
+
+                return itemsData;
+            }
+        }
 
         private readonly List<PickUpItem> _availableItems = new();
         
@@ -26,6 +46,11 @@ namespace InventorySystem
             foreach (var slot in slots)
             {
                 slot.Initialize();
+            }
+
+            foreach (var item in GameInfo.InventoryItems)
+            {
+                TryAddItem(item);
             }
         }
 
@@ -42,6 +67,32 @@ namespace InventorySystem
         private void Update()
         {
             PickUpItems();
+        }
+        
+        public bool TryAddItem(ItemData item)
+        {
+            foreach (var slot in slots)
+            {
+                if (slot.Presenter.TrySetItem(item))
+                {
+                    return true;
+                }
+            }
+
+            return false;
+        }
+
+        public bool IsHaveItem(ItemData item)
+        {
+            foreach (var otherItem in Items)
+            {
+                if (otherItem == item)
+                {
+                    return true;
+                }
+            }
+
+            return false;
         }
 
         private void GetPickUpComponent(Collider2D other, Action<PickUpItem> action)
@@ -66,19 +117,6 @@ namespace InventorySystem
                     Destroy(_availableItems[i].gameObject);
                 }
             }
-        }
-
-        private bool TryAddItem(ItemData item)
-        {
-            foreach (var slot in slots)
-            {
-                if (slot.Presenter.TrySetItem(item))
-                {
-                    return true;
-                }
-            }
-
-            return false;
         }
     }
 }
