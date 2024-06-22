@@ -53,8 +53,7 @@ namespace MiniGames.AxeClicker
 
         private void Awake()
         {
-            // Раскоммитить после реализации запуска игры после диалога
-            // Hide(); 
+            Hide(); 
         }
 
         private void Update()

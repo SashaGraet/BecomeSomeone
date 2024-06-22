@@ -13,6 +13,7 @@ namespace SceneManagement
     public class SceneLoader : MonoBehaviour
     {
         [SerializeField] private int loadSceneIndex;
+        [SerializeField] private Vector2 toPosition;
 
         private Inventory _inventory;
 
@@ -26,6 +27,7 @@ namespace SceneManagement
             if (other.CompareTag("Player"))
             {
                 GameInfo.InventoryItems = _inventory.Items;
+                GameInfo.NewPosition = toPosition;
                 SceneManager.LoadScene(loadSceneIndex);
             }
         }

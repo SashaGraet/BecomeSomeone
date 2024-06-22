@@ -60,8 +60,7 @@ namespace ServiceLocatorSystem
             ServiceLocator.Instance.Get<RolesManager>().Initialize();
             ServiceLocator.Instance.Get<PauseMenuView>().Initialize();
             ServiceLocator.Instance.Get<Timer>().Initialize();
-            ServiceLocator.Instance.Get<MiniGamesManager>().StartGame<AxeClicker>();
-
+            
             GameInfo.IsInitialized = true;
         }
     }

@@ -29,6 +29,11 @@ namespace Actors.Player
             {
                 GameInfo.PlayerInfo = playerInfo;
             }
+
+            if (GameInfo.NewPosition != null) 
+            {
+                transform.position = (Vector2)GameInfo.NewPosition;
+            }
             
             healthView.Initialize();
             coinsView.Initialize();

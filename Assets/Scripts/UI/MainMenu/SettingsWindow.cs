@@ -13,6 +13,7 @@ namespace UI.MainMenu
         [SerializeField] private TMP_Dropdown dropdown;
         [SerializeField] private SaveFilesConfig saveFilesConfig;
         [SerializeField] private Toggle toggle;
+        [SerializeField] private MainMenuView mainMenu;
 
         private Settings _settings;
         
@@ -82,6 +83,12 @@ namespace UI.MainMenu
                 resolution = resolutions[0]
             };
             SaveSettings();
+        }
+
+        public void CloseSettings()
+        {
+            gameObject.SetActive(false);
+            mainMenu.gameObject.SetActive(true);
         }
     }
 }
